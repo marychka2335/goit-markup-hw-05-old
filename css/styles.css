@@ -13,7 +13,8 @@ html {
   --main-background: #F5F5F5;
   --main-font: 'Roboto', sans-serif;
   --second-font: 'Raleway', sans-serif;
-  --slow-transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --slow-transform: 250ms;
+  --trans-timing: cubic-bezier(0.4, 0, 0.2, 1);
   --idx-backdrop: 1000;
 }
 
@@ -132,7 +133,9 @@ img {
 
 .site-nav .link {
   color: var(--main-color);
-  transition: color var(--slow-transform);
+  transition-property: color, transform;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
 }
 
 .header-nav-link {
@@ -162,7 +165,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color var(--slow-transform);
+  transition-property: color, transform;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
 }
 
 .contact-container {
@@ -182,7 +187,9 @@ img {
 .contact-item-icon {
   margin-right: 10px;
   fill: var(--second-color);
-  transition: fill var(--slow-transform);
+  transition-property: fill, transform;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
 
 }
 
@@ -214,7 +221,9 @@ img {
 
 .site-nav .link.current {
   color: var(--active-color);
-  transition: color var(--slow-transform);
+  transition-property: color, transform;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
 }
 
 .site-nav {
@@ -278,7 +287,9 @@ h1 {
   color: var(--main-white-color);
   background-color: var(--active-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: color var(--slow-transform);
+  transition-property: color, transform;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
 
   display: block;
   margin-left: auto;
@@ -436,7 +447,9 @@ h1 {
   align-items: center;
   justify-content: center;
   color: var(--icons-color);
-  transition: color var(--slow-transform);
+  transition-property: color, transform;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
   flex-basis: calc((100% - 10px) / 4);
 }
 
@@ -445,7 +458,9 @@ h1 {
   width: 44px;
   height: 44px;
   fill: var(--icons-color);
-  transition: var(--slow-fill-transform);
+  transition-property: fill;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
 }
 
 .team-icons-items {
@@ -455,6 +470,9 @@ h1 {
   align-items: center;
   justify-content: center;
   fill: var(--icons-color);
+  transition-property: fill, transform;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
 }
 
 .team-icons-items:hover,
@@ -501,14 +519,18 @@ h1 {
 
 .client-items {
   fill: var(--icons-color);
-  transition: fill var(--slow-transform);
+  transition-property: fill, transform;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
 }
 
 .clients-icons-items {
   border: 1px solid var(--second-color);
   border-radius: 4px;
   fill: var(--icons-color);
-  transition: color var(--slow-transform), fill var(--slow-transform);
+  transition-property: fill, color;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -545,7 +567,9 @@ h1 {
   background: var(--button-color);
   /* box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); */
   padding: 6px 22px;
-  transition: color var(--slow-transform), background-color var(--slow-transform);
+  transition-property: color, background-color;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
 }
 
 .filter-btn:hover,
@@ -572,7 +596,9 @@ h1 {
 
 .projects {
   background-color: var(--main-white-color);
-  transition: background-color var(--slow-transform);
+  /* transition-property: background-color;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing); */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -593,6 +619,9 @@ h1 {
 
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition-property: background-color;
+  transition-duration: var(--slow-fill-transform);
+  transition-timing-function: var(--trans-timing); */
 }
 
 .projects-item:hover .projects-overlay {
@@ -630,7 +659,7 @@ h1 {
   line-height: calc(28 / 18);
   letter-spacing: 0.03em;
   color: var(--main-white-color);
-  background-color: var(--active-color);
+  /* background-color: var(--active-color); */
   padding: 63px 24px;
 }
 
@@ -676,7 +705,9 @@ address {
 
 .address-list .location {
   color: var(--main-white-color);
-  transition: color var(--slow-transform);
+  transition-property: color, transform;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
 }
 
 /* a[href*="goo.gl"] {
@@ -690,7 +721,9 @@ a[href*="goo.gl"]:focus {
 
 .address-style {
   color: rgba(255, 255, 255, 0.6);
-  transition: color var(--slow-transform);
+  transition-property: color;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
 
 }
 
@@ -730,6 +763,14 @@ a[href*="goo.gl"]:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-property: background-color, transform;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
+}
+
+.footer-icons-items:focus {
+  background-color: var(--active-color);
+  border-radius: 50%;
 }
 
 .footer-social-item:not(:last-child) {
@@ -739,7 +780,9 @@ a[href*="goo.gl"]:focus {
 .footer-social-item {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
-  transition: background-color var(--slow-transform);
+  transition-property: background-color, transform;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
 }
 
 .footer-social-item:hover {
@@ -748,7 +791,9 @@ a[href*="goo.gl"]:focus {
 
 .footer-team-icons {
   fill: var(--main-white-color);
-  transition: fill var(--slow-transform);
+  transition-property: fill, background-color;
+  transition-duration: var(--slow-transform);
+  transition-timing-function: var(--trans-timing);
 }
 
 .footer-team-icons:hover,
@@ -756,10 +801,7 @@ a[href*="goo.gl"]:focus {
   fill: var(--main-white-color);
 }
 
-.footer-icons-items:focus {
-  background-color: var(--active-color);
-  border-radius: 50%;
-}
+
 
 /* modal window */
 .backdrop {
@@ -769,11 +811,10 @@ a[href*="goo.gl"]:focus {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  /* z-index: var(--idx-backdrop); */
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
-  /* backdrop-filter: blur(2px); */
+  backdrop-filter: blur(1px);
 }
 
 .backdrop.is-hidden {
@@ -784,13 +825,11 @@ a[href*="goo.gl"]:focus {
 
 .modal {
   position: absolute;
-  width: 50%;
-  height: 50%;
-  transform: translate(0%, 0%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
-  left: 536px;
-  top: 221px;
   background-color: var(--main-white-color);
 }
 
